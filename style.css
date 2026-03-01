@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#players-section {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#loot-input-section {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#loot-display-section {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#actions {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#explanation-section {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+input {
+  padding: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#results {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* Screens 768px and smaller */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    grid-column: 1;
+  }
+
+  #players-section {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #loot-input-section {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #loot-display-section {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #explanation-section {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dungeon Loot Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Dungeon Loot Splitter</h1>
+   
+  </header>
+
+  <main>
+
+    <section id="players-section">
+
+      <h2>Party Setup</h2>
+
+      <div class="input-row">
+        <input id="player-name" placeholder="Player name">
+        <button id="add-player">Add Player</button>
+      </div>
+
+      <ul id="player-list"></ul>
+    </section>
+
+    <section id="loot-input-section">
+
+      <h2>Add Loot</h2>
+
+      <div class="input-row">
+        <input id="loot-name" placeholder="Item name">
+        <input id="loot-value" type="number" placeholder="Value (gold)">
+        <button id="add-loot">Add Loot</button>
+      </div>
+      
+    </section>
+
+    <section id="loot-display-section">
+
+      <h2>Loot List</h2>
+
+      <ul id="loot-list"></ul>
+
+      <div id="total-loot-running">
+        <h3>Total Loot (Running Accumulation)</h3>
+        <p id="running-total">0 gold</p>
+      </div>
+
+    </section>
+
+    <section id="actions">
+
+      <button id="calculate">Split Loot</button>
+
+      <div id="results-section">
+
+        <h3>Results</h3>
+        <div id="results"></div>
+      </div>
+
+
+      <h3>Total Loot (Final Calculation)</h3>
+        <p id="final-total">0 gold</p>
+      </div>
+    </section>
+
+    <section id="explanation-section">
+      <h2>Logic Explanation</h2>
+      <p>The arrays store the loot items and player names. The final result is based on them. The event listeners update the UI when items or players are added. There is an if loop to make sure the loot value is more than 0 and the player name is valid. Conditional logic occurs when invalid data is detected to prevent invalid items or players from being added.</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
